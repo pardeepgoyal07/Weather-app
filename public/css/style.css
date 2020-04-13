@@ -35,10 +35,10 @@ header a {
     font-size: 20px;
     padding: 10px;
 }
-a:active {
+header a:active {
     background-color: grey;
 }
-a:hover {
+header a:hover {
     color: white;
     background-color: orangered
 }
