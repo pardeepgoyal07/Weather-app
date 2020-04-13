@@ -12,8 +12,9 @@ request({url: url},(error,response)=>
         callback('location not found,Try another research',undefined)
     }
     else{
-    const data = JSON.parse(response.body)
-    callback(undefined,data.daily.data[0].summary+"Current temperature is " +data.currently.temperature + ".There are "+data.currently.precipProbability+"% chances of rain. ")
+    const data = JSON.parse(response.body);
+    var k = (data.currently.temperature-32)*(5/9);
+    callback(undefined,data.daily.data[0].summary+"Current temperature is " + k + ".There are "+data.currently.precipProbability+"% chances of rain. ")
 }
 })
 }
