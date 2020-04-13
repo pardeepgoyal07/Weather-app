@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+    </head>
+<body>
+   <div class="main-content"> <header>{{>header}}
+    <font size="4"><p>This is a {{title}} </p> </font>
+    </header>
+  <div style="position: absolute; left: 27vw; " > 
+    <form><input placeholder="Location" style="border:2px solid black; padding: 10px 20px; font-size:larger; font-family:Arial, Helvetica, sans-serif ;width: 300px; height: 30px" >
+    <button style="font-size:larde; font-family:Arial, Helvetica, sans-serif ;width: 140px; height: 40px; cursor: pointer; background-color:darkgray; border: 1px solid black;" >Search</button>
+ </form> 
+  <p id='message-1' style="    font-size: 15px; color: orangered; font-family: Verdana, Geneva, Tahoma, sans-serif;
+"> </p>
+   <p id='message-2' style="font-size: 15px; color: orangered; font-family: Verdana, Geneva, Tahoma, sans-serif;"> </p></div> 
+ </div>
+   
+    <footer>{{>footer}}</footer>
+    <script src="/js/abc.js"></script>
+</body>    
+</html>
