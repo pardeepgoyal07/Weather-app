@@ -7,6 +7,7 @@ const b = path.join(__dirname,'../templates/views')
 const c = path.join(__dirname,'../templates/partials')
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
+const port = process.env.PORT || 3000
 app.set('view engine','hbs')
 app.set('views',b)
 hbs.registerPartials(c)
@@ -71,7 +72,7 @@ app.get('*',(req,res)=>{
         name: 'Pardeep Goyal'
     })
 })
-app.listen(3000,()=>
+app.listen(port,()=>
 {
-    console.log('Server is up and running')
+    console.log('Server is up and running at port ' + port)
 })
