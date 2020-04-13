@@ -14,7 +14,7 @@ request({url: url},(error,response)=>
     else{
     const data = JSON.parse(response.body);
     var k = (data.currently.temperature-32)*(5/9);
-    callback(undefined,data.daily.data[0].summary+"Current temperature is " + k.toFixed(2) + "in degree Celsius.There are "+data.currently.precipProbability+"% chances of rain. ")
+    callback(undefined,data.daily.data[0].summary+"Current temperature is " + k.toFixed(2) +  "\u00B0C.There are "+data.currently.precipProbability+"% chances of rain. ")
 }
 })
 }
