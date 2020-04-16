@@ -14,7 +14,9 @@ request({url: url},(error,response)=>
     else{
     const data = JSON.parse(response.body);
     var k = (data.currently.temperature-32)*(5/9);
-    callback(undefined,data.daily.data[0].summary+"Current temperature is " + k.toFixed(2) +  "\u00B0C.There are "+data.currently.precipProbability+"% chances of rain. ")
+    var maxx = (data.daily.data[0].temperatureHigh-32)*(5/9);
+    var minn = (data.daily.data[0].temperatureLow-32)*(5/9);
+    callback(undefined,data.daily.data[0].summary+"Current temperature is " + k.toFixed(2) +  "\u00B0C.The max temperature for today is "+maxx.toFixed(2)+"\u00B0C.The min temperature for today is "+minn.toFixed(2)+"\u00B0C.There are "+data.currently.precipProbability+"% chances of rain. ")
 }
 })
 }
